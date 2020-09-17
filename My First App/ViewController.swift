@@ -15,6 +15,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let label = UILabel()
+        //label.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
+        label.text = "Hello from code!"
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
+        label.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
         myLabel.text = "Change with code!"
         myTextField.becomeFirstResponder()
         lastName.becomeFirstResponder()
